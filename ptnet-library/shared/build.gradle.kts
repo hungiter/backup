@@ -12,7 +12,7 @@ kotlin {
             }
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -27,17 +27,11 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(libs.gson)
+            implementation(libs.okhttp)
             implementation(libs.jnbPing)
-//            implementation(libs.compose.ui.tooling)
-//            implementation(libs.compose.ui.tooling.preview)
-
         }
-        androidMain.dependencies {
-            implementation(libs.gson)
-            implementation(libs.okhttp3)
-            implementation(libs.compose.ui)
-        }
-        iosMain.dependencies {  }
+        androidMain.dependencies { }
+        iosMain.dependencies { }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
@@ -59,5 +53,4 @@ android {
 
 dependencies {
     implementation(libs.gson)
-//    implementation(libs.okhttp3)
 }

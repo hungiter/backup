@@ -7,10 +7,7 @@ expect class PingService {
 }
 
 fun parseDomain(hopInfo: String): String {
-    val hopMatch =
-        Regex("(?:64 bytes from |From )((?:[a-zA-Z0-9-]+\\.)*[a-zA-Z0-9-]+)(?=\\s|\\()").find(
-            hopInfo
-        )
+    val hopMatch = Regex("(?:64 bytes from |From )((?:[a-zA-Z0-9-]+\\.)*[a-zA-Z0-9-]+)(?=\\s|\\()").find(hopInfo)
     return hopMatch?.groups?.get(1)?.value ?: ""
 }
 

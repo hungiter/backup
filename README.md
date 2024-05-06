@@ -1,2 +1,3 @@
-# backup
- 
+# firstProject
+Open ~\librariesplugin\example\android
+
